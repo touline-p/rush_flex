@@ -6,7 +6,7 @@
 /*   By: bpoumeau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 20:33:39 by bpoumeau          #+#    #+#             */
-/*   Updated: 2023/07/14 20:55:52 by marobert         ###   ########.fr       */
+/*   Updated: 2023/07/15 10:55:40 by marobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@
 # include <stdio.h>
 # include <unistd.h>
 
-char	**ft_split(char const *str, char c);
-int		ft_sqrt(int nb);
-
 typedef struct s_rush
 {
 	unsigned int size;
@@ -29,6 +26,13 @@ typedef struct s_rush
 	char	*s;
 	char	*e;
 }	t_rush;
+
+unsigned int	ft_tab_len(char **tab);
+char		**ft_split(char const *str, char c);
+int			ft_sqrt(int nb);
+char		**init_arr(t_rush *rush, unsigned int size);
+t_rush		*init_rush(unsigned int size);
+t_rush		*free_rush(t_rush *rush);
 
 #endif 
 
